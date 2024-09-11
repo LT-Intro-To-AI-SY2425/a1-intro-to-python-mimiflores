@@ -3,5 +3,5 @@
 # Mr. Berg will be going over all parts, but will not be grading anything in this file
 
 
-
+print("hello world")
 
