@@ -19,11 +19,13 @@ assert fizbuzz(15) == "FizzBuzz", "fizzbuzz 15 test"
 
 # 1. Sum of Two Numbers
 # Write a function `sum_two_numbers` that takes two numbers as arguments and returns their sum.
-
+def sum_two_numbers(n1, n2):
+    return n1+ n2
 # 2. Convert Celsius to Fahrenheit
 # Write a function `celsius_to_fahrenheit` that converts a temperature from Celsius to Fahrenheit.
 # Use the formula: F = C * 9/5 + 32
-
+def celsius_to_fahrenheit(temp):
+    return temp * 9/5 + 32
 # 3. Check Even or Odd
 # Write a function `is_even` that returns `True` if a given number is even, and `False` otherwise.
 
