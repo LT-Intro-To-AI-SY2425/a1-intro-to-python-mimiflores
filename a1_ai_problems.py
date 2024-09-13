@@ -17,38 +17,20 @@ assert fizbuzz(5) == "Buzz", "fizzbuzz 5 test"
 assert fizbuzz(6) == "Fizz", "fizzbuzz 6 test"
 assert fizbuzz(15) == "FizzBuzz", "fizzbuzz 15 test"
 
-# 1. Sum of Two Numbers
-# Write a function `sum_two_numbers` that takes two numbers as arguments and returns their sum.
-def sum_two_numbers(n1, n2):
-    return n1+ n2
-# 2. Convert Celsius to Fahrenheit
-# Write a function `celsius_to_fahrenheit` that converts a temperature from Celsius to Fahrenheit.
-# Use the formula: F = C * 9/5 + 32
-def celsius_to_fahrenheit(temp):
-    return temp * 9/5 + 32
-# 3. Check Even or Odd
-# Write a function `is_even` that returns `True` if a given number is even, and `False` otherwise.
-def is_even(num):
+# Write a function that generates the Fibonacci sequence up 
+# to a certain number n. The Fibonacci sequence is a series
+#  where the next number is found by adding up the two numbers
+#   before it. For example, 0, 1, 1, 2, 3, 5, 8, ...
+
+def fibonacci(n):
+    fib_final = []
+    a, b = 0, 1
+    while a <= n:
+        fib_final.append(a)
+        a, b = b, a + b
+    return fib_final
+
+# Write a function that checks if a given string is a palindrome 
+# (a word, phrase, or sequence that reads the same backward as forward).
+def isPalindrome(str):
     
-# 4. List Length
-# Write a function `list_length` that returns the length of a given list.
-
-# 5. Find Minimum in List
-# Write a function `find_minimum` that finds and returns the smallest number in a list of numbers.
-
-# 6. Repeat a String
-# Write a function `repeat_string` that takes a string and a number as arguments and returns the string repeated that many times.
-
-# 7. Count Words in String
-# Write a function `count_words` that counts the number of words in a given string.
-# Assume words are separated by spaces.
-
-# 8. Square a Number
-# Write a function `square_number` that takes a number as an argument and returns its square.
-
-# 9. List Contains Number
-# Write a function `contains_number` that takes a list and a number as arguments and returns `True` if the number is in the list, and `False` otherwise.
-
-# 10. Find the First Element
-# Write a function `first_element` that returns the first element of a list. If the list is empty, return `None`.
-
