@@ -33,4 +33,4 @@ def fibonacci(n):
 # Write a function that checks if a given string is a palindrome 
 # (a word, phrase, or sequence that reads the same backward as forward).
 def isPalindrome(str):
-    
+    return s == s[::-1]
