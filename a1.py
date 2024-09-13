@@ -38,7 +38,10 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    result = 1
+    for x in range(1, n+1):
+        result *= x
+    return result 
 
 
 T = TypeVar("T")
@@ -124,6 +127,7 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
+    assert factorial(5) == 120, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
         3,

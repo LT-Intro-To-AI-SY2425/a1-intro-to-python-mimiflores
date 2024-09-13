@@ -28,7 +28,8 @@ def celsius_to_fahrenheit(temp):
     return temp * 9/5 + 32
 # 3. Check Even or Odd
 # Write a function `is_even` that returns `True` if a given number is even, and `False` otherwise.
-
+def is_even(num):
+    
 # 4. List Length
 # Write a function `list_length` that returns the length of a given list.
 
