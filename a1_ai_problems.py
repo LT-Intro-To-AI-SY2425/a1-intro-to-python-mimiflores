@@ -34,3 +34,19 @@ def fibonacci(n):
 # (a word, phrase, or sequence that reads the same backward as forward).
 def isPalindrome(str):
     return s == s[::-1]
+
+# Sure! How about a function that computes the n-th triangular number?
+# The n-th triangular number is the sum of the first n natural numbers.
+
+def triangular_number(n):
+    # Base case: triangular number of 1 is 1
+    if n == 1:
+        return 1
+    # Recursive case: triangular number of n is n + triangular number of (n - 1)
+    else:
+        # Complete the recursion here
+        pass
+
+# Example usage
+print(triangular_number(5))  # Expected output: 15
+
