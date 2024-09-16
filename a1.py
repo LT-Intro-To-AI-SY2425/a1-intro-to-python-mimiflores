@@ -71,8 +71,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    return sum(lst)
-
+    result = 0
+    for el in lst():
+        result += el
+    return result 
 
 def mean(lst: List[int]) -> float:
     """Takes a list of numbers, and returns the mean of the numbers.

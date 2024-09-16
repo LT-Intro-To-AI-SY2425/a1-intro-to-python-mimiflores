@@ -44,9 +44,9 @@ def triangular_number(n):
         return 1
     # Recursive case: triangular number of n is n + triangular number of (n - 1)
     else:
-        # Complete the recursion here
-        pass
+        result = 0
+        for x in range(1, n+1):
+            result += x
+        return result 
 
-# Example usage
-print(triangular_number(5))  # Expected output: 15
 
