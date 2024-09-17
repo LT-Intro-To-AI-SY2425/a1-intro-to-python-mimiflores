@@ -32,6 +32,7 @@ def fibonacci(n):
 
 # Write a function that checks if a given string is a palindrome 
 # (a word, phrase, or sequence that reads the same backward as forward).
+
 def isPalindrome(str):
     return s == s[::-1]
 
@@ -49,4 +50,21 @@ def triangular_number(n):
             result += x
         return result 
 
+# Implement a function that finds the length of the longest substring without 
+# repeating characters in a given string. For example, in the string "abcabcbb",
+#  the longest substring without repeating characters is "abc", so the function 
+#  should return 3.
 
+def length_of_longest_substring(s: str) -> int:
+    start = 0
+    max_length = 0
+    char_set = set()
+    
+    for end in range(len(s)):
+        while s[end] in char_set:
+            char_set.remove(s[start])
+            start += 1
+        char_set.add(s[end])
+        max_length = max(max_length, end - start + 1)
+    
+    return max_length
