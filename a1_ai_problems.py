@@ -97,3 +97,32 @@ def remove_nth_element(lst: List[int], n: int) -> List[int]:
             index = 0
 
     return removed_elements
+
+def shuffle_list(lst: List[int], k: int) -> List[int]:
+    """Shuffle the list by removing every k-th element and adding it to the end.
+
+    Args:
+        lst: A list of integers.
+        k: The step count for removal (1-based).
+
+    Returns:
+        A new list with the elements shuffled in the specified order.
+    """
+
+    shuffled_list = []  
+    index = 0  
+    count = 0 
+
+    while lst:  
+        count += 1 
+        
+        if count == k:  
+            shuffled_list.append(lst.pop(index)) 
+            count = 0  
+        else:
+            index += 1 
+            
+        if index >= len(lst):
+            index = 0
+
+    return shuffled_list
