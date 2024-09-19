@@ -126,3 +126,21 @@ def shuffle_list(lst: List[int], k: int) -> List[int]:
             index = 0
 
     return shuffled_list
+
+def rotate_list(lst: List[int], k: int) -> List[int]:
+    """Rotate the list to the right by k positions.
+
+    Args:
+        lst: A list of integers.
+        k: The number of positions to rotate (can be greater than the length of the list).
+
+    Returns:
+        A new list with the elements rotated to the right by k positions.
+    """
+
+    n = len(lst)
+    if n == 0:
+        return lst  
+    
+    k = k % n  
+    return lst[-k:] + lst[:-k]
