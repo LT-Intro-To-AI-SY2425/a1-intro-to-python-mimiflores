@@ -130,7 +130,22 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    index = 0 
+    count = 0  
+
+    while len(lst) > 2:
+        count += 1 
+        
+        if count == 3:  
+            lst.pop(index)  
+            count = 0  
+        else:
+            index += 1  
+            
+        if index >= len(lst):
+            index = 0
+
+    return lst
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
