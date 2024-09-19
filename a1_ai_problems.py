@@ -68,3 +68,32 @@ def length_of_longest_substring(s: str) -> int:
         max_length = max(max_length, end - start + 1)
     
     return max_length
+
+def remove_nth_element(lst: List[int], n: int) -> List[int]:
+    """Remove every n-th element from the list until the list is empty.
+
+    Args:
+        lst: A list of integers.
+        n: The step count for removal (1-based).
+
+    Returns:
+        A list of the removed elements in the order they were removed.
+    """
+
+    removed_elements = [] 
+    index = 0  
+    count = 0  
+
+    while lst: 
+        count += 1 
+        
+        if count == n: 
+            removed_elements.append(lst.pop(index))  
+            count = 0  
+        else:
+            index += 1
+            
+        if index >= len(lst):
+            index = 0
+
+    return removed_elements
